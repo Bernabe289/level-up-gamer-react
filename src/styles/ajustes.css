@@ -1,0 +1,21 @@
+/* Ajustes de la versión React */
+button:disabled { opacity: .55; cursor: not-allowed; }
+.admin-critico { color: #ff8686; font-size: 12px; font-weight: 700; margin-left: 7px; }
+.admin-form .admin-campo input:focus, .admin-form .admin-campo select:focus { border-color: #39ff14; }
+.admin-detalle-dato span { max-width: 70%; overflow-wrap: anywhere; text-align: right; }
+.admin-layout .admin-tarjeta { text-decoration: none; }
+.admin-layout .admin-tarjeta:hover { border-color: #39ff14; }
+.producto-card .boton-agregar:disabled { background: #515a58; }
+.navbar .menu-usuario { flex-wrap: wrap; }
+.navbar .usuario-sesion { align-items: center; flex-wrap: wrap; gap: 9px; }
+@media (max-width: 950px) {
+  .navbar { flex-wrap: wrap; gap: 12px; padding: 15px 20px; }
+  .navbar .menu-principal { flex-wrap: wrap; justify-content: center; gap: 15px; }
+  .navbar .menu-usuario { justify-content: center; }
+  .admin-encabezado-fila { flex-wrap: wrap; }
+}
+@media (max-width: 550px) {
+  .admin-tabla th, .admin-tabla td { padding: 12px 10px; }
+  .navbar .menu-principal { gap: 10px; }
+  .carrito-contenido { grid-template-columns: 1fr; }
+}

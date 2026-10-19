@@ -315,11 +315,6 @@ level-up-gamer-react/
 │   ├── ui-entry.jsx
 │   └── browser-setup.js
 │
-├── documentos/
-│   ├── ERS_LEVEL_UP_GAMER.pdf
-│   ├── Cobertura_Testing_LEVEL_UP_GAMER.pdf
-│   └── Guia_Defensa_LEVEL_UP_GAMER.pdf
-│
 ├── index.html
 ├── package.json
 ├── karma.conf.cjs

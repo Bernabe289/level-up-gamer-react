@@ -1,5 +1,5 @@
 // Dirección del backend. Sale de la variable VITE_API_URL (archivo .env); por defecto, el backend local.
-const BASE = import.meta.env.VITE_API_URL || 'http://localhost:8080'
+const BASE = import.meta.env?.VITE_API_URL || 'http://localhost:8080'
 
 // Error de la API: guarda el código HTTP, el mensaje del servidor y la lista de campos inválidos.
 export class ErrorApi extends Error {

@@ -5,8 +5,9 @@ import { formatoPrecio } from '../utils/tienda.js'
 
 function AdminProductoDetalle() {
   const [parametros] = useSearchParams()
-  const { productos } = useContext(ProductosContext)
+  const { productos, cargando } = useContext(ProductosContext)
   const p = productos.find(item => item.id === parametros.get('id'))
+  if (cargando) return <p className="p-4">Cargando...</p>
   if (!p) return <div><h1>Producto no encontrado</h1><Link to="/admin/productos">Volver</Link></div>
   return <>
     <div className="admin-encabezado"><p className="admin-etiqueta">DETALLE DE PRODUCTO</p><h1>{p.nombre}</h1></div>

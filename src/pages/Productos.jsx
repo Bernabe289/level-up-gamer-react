@@ -7,7 +7,7 @@ import ProductCard from '../components/ProductCard.jsx'
 function Productos() {
 
   // Productos compartidos
-  const { productos } = useContext(ProductosContext)
+  const { productos, cargando, error } = useContext(ProductosContext)
 
   // Estados de los filtros
   const [busqueda, setBusqueda] = useState('')
@@ -142,8 +142,10 @@ function Productos() {
 
         </div>
 
-        {/* Sin resultados */}
-        {productosFiltrados.length === 0 && (
+        {/* Estado de la carga */}
+        {cargando && <p className="text-center py-4">Cargando productos...</p>}
+        {error && <p className="text-center py-4" role="alert">{error}</p>}
+        {!cargando && !error && productosFiltrados.length === 0 && (
           <p className="text-center py-4">
             No se encontraron productos.
           </p>

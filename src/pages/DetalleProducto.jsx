@@ -5,11 +5,12 @@ import { formatoPrecio } from '../utils/tienda.js'
 
 function DetalleProducto() {
   const [parametros] = useSearchParams()
-  const { productos } = useContext(ProductosContext)
+  const { productos, cargando } = useContext(ProductosContext)
   const { agregarAlCarrito } = useContext(CarritoContext)
   const [cantidad, setCantidad] = useState(1)
   const [mensaje, setMensaje] = useState('')
   const producto = productos.find(p => p.id === parametros.get('id'))
+  if (cargando) return <main className="container py-5"><p>Cargando producto...</p></main>
   if (!producto) return <main className="container py-5"><h1>Producto no encontrado</h1><Link to="/productos">Volver al catálogo</Link></main>
   function agregar() {
     if (agregarAlCarrito(producto.id, cantidad)) setMensaje('Producto agregado al carrito.')

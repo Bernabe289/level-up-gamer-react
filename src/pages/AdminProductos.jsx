@@ -33,7 +33,7 @@ function AdminProductos() {
         <td>
           <Link className="admin-accion" to={`/admin/producto-detalle?id=${encodeURIComponent(p.id)}`}>Ver</Link>
           <Link className="admin-accion" to={`/admin/producto-editar?id=${encodeURIComponent(p.id)}`}>Editar</Link>
-          <button type="button" className="admin-accion" onClick={() => quitar(p)}>Desactivar</button>
+          <button type="button" className="admin-accion-eliminar" onClick={() => quitar(p)}>Desactivar</button>
         </td>
       </tr>)}
     </tbody></table>
